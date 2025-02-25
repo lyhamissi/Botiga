@@ -2,13 +2,15 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import mainRouter from './routes/indexRouting.js';
+import bodyParser from 'body-parser';
 dotenv.config();
+
 const port = process.env.PORT || 3000
 const db_user = process.env.DB_USER;
 const db_name = process.env.DB_NAME;
 const db_pass = process.env.DB_PASS;
 const app = express();
-app.use(express.json())
+app.use(bodyParser.json())
 app.use('/', mainRouter);
 // app.get('/getrequest',(req,res) => {
 //     res.send("This is my first project in Node JS ")
