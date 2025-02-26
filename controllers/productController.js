@@ -9,6 +9,7 @@ cloudinary.config({
     api_key: process.env.CLOUD_API,
     api_secret: process.env.CLOUD_API_SECRET,
 });
+export default cloudinary;
 export const createProduct = async (req, res) => {
     try {
         if (!req.file) {
