@@ -5,7 +5,7 @@ import mainRouter from './routes/indexRouting.js';
 import bodyParser from 'body-parser';
 dotenv.config();
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 10000
 const db_user = process.env.DB_USER;
 const db_name = process.env.DB_NAME;
 const db_pass = process.env.DB_PASS;

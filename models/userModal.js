@@ -18,9 +18,12 @@ const userSchema = new Schema(
         },
         userRole: {
             type: String,
-            default: user,
+            default: "user",
             required: true,
             enum: ["user", "admin"]
+        },
+        token: {
+            accessToken: { type: String }
         }
     }
 );
